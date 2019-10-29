@@ -1,0 +1,22 @@
+.c-contactform {
+	
+	@media ( max-width: $tablet + px ) {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	
+	.o-cols {
+		&__item {
+			
+			@media ( min-width: $tablet + 1px ) {
+				padding-right: 40px;
+			}
+			
+			&:first-of-type {
+				@media ( max-width: $tablet + px ) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

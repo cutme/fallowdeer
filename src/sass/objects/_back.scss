@@ -1,0 +1,52 @@
+.o-back {
+	@extend %abs;
+    left: calc((100% - 1090px)/2); top: 20px;
+    
+    @media ( max-width: $base + 80px ) {
+		left: 40px;
+	}
+	
+	@media ( max-width: $tablet + px ) {
+		left: 30px;
+		top: 30px;
+	}
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		left: 20px;
+	}
+    
+    span {
+	    line-height: 1;
+	    font-size: rem(40);
+	    
+	    @media ( max-width: $tablet + px ) {
+			font-size: rem(32);
+		}
+    }
+    
+    .icon-arrow-left {
+        vertical-align: bottom;
+	    font-size: rem(36);
+	    
+	    @media ( max-width: $tablet + px ) {
+			font-size: rem(24);
+		}
+	    
+	    &:before {
+		    @extend %anim;
+		    display: inline-block;
+	    }
+    }
+    
+    &:hover {
+	    span {
+		    color: $c-primary;
+	    }
+	    
+	    .icon-arrow-left {
+		    &:before {
+		    	transform: translate3d(-4px, 0, 0);
+		    }
+	    }
+    }
+}

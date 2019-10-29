@@ -1,0 +1,55 @@
+// Fonts
+
+$icomoon:           'icomoon';
+$futura:		    'Futura PT', sans-serif;
+$futuraBookObl:		'Futura PT Book Italic', sans-serif;
+$futuraBoldObl:		'Futura PT Bold Italic', sans-serif;
+$futuraMediObl:		'Futura PT Medium Italic', sans-serif;
+$text:		        $futura;
+
+
+
+
+// Font weights
+
+$extralight:        200;
+$light:             300;
+$book:				350;
+$regular:           400;
+$medium:            500;
+$semibold:          600;
+$bold:              700;
+$extrabold:         800;
+
+
+$z-index: (
+    hamburger:      100,
+    header:         30,
+	top           : 40,
+	nav           : 40,
+	logo          : 50
+);
+
+// Paths
+
+$path_img:          '../img';
+$path_fonts:        '../fonts';
+
+
+
+// Default
+
+$base-font-size:	18;
+$base:				1090;
+
+
+
+// RWD
+
+$desktop:              1920;
+$tablet:               1024;
+$tablet_portrait:       768;
+$smartphone:			640;
+$smartphone_portrait:	500;
+$thumbs:				1374;
+$colphoto:				1340;

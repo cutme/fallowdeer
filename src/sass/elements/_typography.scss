@@ -1,0 +1,59 @@
+body {
+	@include antialias;
+	background-color: $c-gray-01;
+	line-height: 1.3;
+	text-rendering: optimizeSpeed;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $book;
+	}
+	color: $c-black-01;
+}
+
+a {
+	@extend %anim;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	
+	.is-loaded & {
+        
+    }
+	
+	&:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+em {
+	font-family: $futuraBookObl;
+}
+
+input {
+    font-size: #{$base-font-size}px;
+}
+
+strong {
+    font-weight: $bold;
+}
+
+::selection {
+	background-color: $c-primary;
+	color: white;
+}
+
+strong {
+	em {
+		font-family: $futuraBoldObl;
+	}
+}
+
+hr {
+    background-color: $c-gray-01;
+    border-top: 0;
+    height: 1px;
+    margin: 5px 0 40px 0;
+}

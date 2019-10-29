@@ -1,0 +1,48 @@
+.c-video {
+/*
+	.o-cols {
+
+		&__item {
+			&:first-of-type {
+				
+				.o-article {
+					width: 260px;
+					margin: 0 auto;
+				}
+				
+			}
+		}
+	}
+*/
+	
+	&__item {
+		@extend %rel;
+		display: block;
+		max-width: 444px;
+		height: 250px;
+		background-color: white;
+		border-radius: 18px;
+		
+		@media ( max-width: $tablet_portrait + px ) {
+			margin: 0 auto;
+		}
+		
+		&:after {
+			@extend %abs;
+			@extend %abs-xy;
+			@extend %abs-after;
+			@extend %flex;
+			@extend %flex-xy;
+			width: 112px;
+			height: 112px;
+			border: 1px solid $c-gray-02;
+			border-radius: 50%;
+			font: {
+				family: $icomoon;
+				size: rem(34);
+			}
+			content: "\e906";
+			color: $c-gray-02;
+		}
+	}
+}

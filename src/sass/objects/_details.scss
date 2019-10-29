@@ -1,0 +1,26 @@
+.o-details {
+		
+	li {
+		font-size: rem(30);
+		
+		@media ( max-width: $tablet_portrait + px ) {
+			font-size: rem(24);
+		}
+	}
+		
+	&__btn {
+		
+		@media ( min-width: $tablet + 1px ) {
+			text-align: center;
+		}
+	}
+	
+	&__list {
+		margin-bottom: 2em;
+	}
+	
+	.o-lead {
+		margin-bottom: 1em;
+	}
+}
+

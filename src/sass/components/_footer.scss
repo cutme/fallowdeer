@@ -1,0 +1,75 @@
+.c-footer {
+	
+	a {
+		.desktop & {
+			&:hover {
+				color: $c-primary;
+			}
+		}
+	}
+	
+	.o-cols {
+		&__item {
+			&:last-of-type {
+				
+				@media ( min-width: $tablet_portrait + 1px ) {
+					text-align: right;
+				}
+				
+				p {
+					margin-bottom: 20px;
+					font-size: rem(24);					
+				}
+			}
+			
+			@media ( max-width: $tablet_portrait + px ) {
+				text-align: center;
+			}
+		}
+	}
+	
+	.c-social {
+		margin-bottom: 20px;
+		
+		@media ( max-width: $tablet_portrait + px ) {
+		    justify-content: center;
+		    width: 100%;
+		}
+		
+		li {
+			&:not(:first-child) {
+				margin-left: 15px;
+			}
+		}
+		
+		[class^="icon-"] {
+			font-size: rem(30);
+		}
+	}
+	
+	.o-logo {
+		margin-bottom: 40px;
+		
+		img {
+			@media ( max-width: $tablet_portrait + px ) {
+				margin: 0 auto;
+			}
+		}
+	}
+	
+	.o-wrap {
+		@extend %rel;
+	}
+	
+	&__gotop {
+		@extend %abs;
+		@extend %flex;
+		@extend %flex-xy;
+		top: -105px;
+		left: 50%;
+		transform: translate3d(-50%,0,0) scaleY(-1);
+		width: 170px; height: 55px;
+		background-color: $c-black-02;
+		font-size: rem(28);
+	}
+}

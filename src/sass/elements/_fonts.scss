@@ -1,0 +1,14 @@
+@include font-face-db( "icomoon", "icomoon", normal);
+@include font-face-db( "Futura PT", "FuturaPT-Bold", $bold);
+@include font-face-db( "Futura PT", "FuturaPT-Book", $book);
+
+@include font-face-db( "Futura PT Bold italic", "FuturaPT-BoldObl", $bold);
+@include font-face-db( "Futura PT Medium Italic", "FuturaPT-MediumObl", $medium);
+@include font-face-db( "Futura PT Book Italic", "FuturaPT-BookObl", $book);
+
+/*
+
+
+
+@include font-face-db( "Futura PT", "subset-FuturaPT-BookObl", $book);
+*/

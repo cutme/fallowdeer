@@ -1,0 +1,107 @@
+.o-article {
+	
+	a {
+		.desktop & {
+			&:hover {
+				color: $c-primary;
+			}
+		}
+	}
+	
+	figure {
+		margin-bottom: 2em;
+
+		img {
+			margin-bottom: 10px;
+		}
+
+		figcaption {
+			font-family: $futuraBookObl;
+		}
+	}
+	
+	h2 {
+		@extend %lead--2;
+		margin-bottom: 1em;
+		font-weight: $bold;
+	}
+	
+	div {
+		line-height: 1.5em;
+	}
+
+	p {
+		margin-bottom: 1.5em;
+	}
+	
+	ul {
+		li {
+			@extend %rel;
+			margin-bottom: 25px;
+			padding-left: 34px;
+			
+			@media ( max-width: $smartphone_portrait + px ) {
+				margin-bottom: 10px;
+			}
+			
+			&:before {
+				@extend %abs;
+				@extend %abs-after;
+				left: 0; top: 0;
+				font-family: $icomoon;
+				content: "\e905";
+				color: white;
+			}
+		}
+	}
+	
+	&--big {
+		font-size: rem(24);
+		
+		@media ( max-width: $smartphone + px ) {
+			font-size: rem(18);
+		}
+		
+		ul {
+			li {
+				margin-bottom: 15px;
+				padding-left: 45px;
+				
+				&:before {
+					top: -6px;
+					font-size: rem(30);
+				}
+			}
+		}
+	}
+	
+	&--centerblock {
+		@extend %flex;
+
+		h2 {
+			display: inline-block;
+			margin: 0 auto;
+		}
+	}
+	
+	&--columns {
+		
+		@media ( min-width: $smartphone + 1px ) {
+			column-count: 2;
+		}
+	}
+
+	&--padding {
+		
+		@media ( min-width: $smartphone + 1px ) {
+			padding-right: grid(160, 545);
+		}
+	}
+	
+	&--smallpadding {
+		
+		@media ( min-width: $smartphone + 1px ) {
+			padding-right: grid(80, 545);
+		}
+	}
+}

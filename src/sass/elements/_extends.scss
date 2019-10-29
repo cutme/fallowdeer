@@ -1,0 +1,194 @@
+%abs {
+	position: absolute;
+	z-index: 5;
+}
+
+%abs-after {
+	display: block;
+	content: ' ';
+}
+
+%abs-pseudo {
+	position: absolute;
+	top: 0;
+	display: block;
+	content: ' ';
+}
+
+%anim {
+    transition: all 150ms ease-out;
+}
+
+%animfix {
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+
+%antialias {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+%abs-x {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+%abs-y {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+%abs-xy {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+%clear {
+	clear: both;
+	
+	&:after {
+		clear: both;
+		display: block;
+		content: '';
+	}
+}
+
+%flex {
+    display: flex;
+}
+
+%flex-column {
+    flex-direction: column;
+}
+
+%flex-inline {
+    display: inline-flex;
+}
+
+%flex-shrink {
+    flex-shrink: 0;
+}
+
+%flex-x {
+	justify-content: center;
+}
+
+%flex-y {
+	align-items: center;
+}
+
+%flex-spacebetween {
+	justify-content: space-between;
+}
+
+%flex-end {
+    align-items: flex-end;
+}
+
+%flex-wrap {
+    flex-wrap: wrap;
+}
+
+%flex-xy {
+	justify-content: center;
+	align-items: center;
+}
+
+%highlight {
+	@extend %rel;
+	display: inline-block;
+	background-color: $c-primary;
+	line-height: 1em;
+
+	&:after {
+	    @extend %abs;
+	    @extend %abs-after;
+	    top: 0;
+	    right: .4px;
+	    height: 100%;
+	    padding-bottom: 10%;
+	    background-color: $c-primary;
+	    transform: translate3d(100%, 0, 0);
+	    clip-path: polygon(0 0, 0% 100%, 100% 0);
+	}
+}
+
+%lead--0 {
+	font-size: rem(50);
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		font-size: rem(40);
+	}
+}
+
+%lead--1 {
+	font-size: rem(40);
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		font-size: rem(36);
+	}
+}
+
+%lead--2 {
+	font-size: rem(32); 
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		font-size: rem(28);
+	}
+}
+
+%lead--3 {
+	font-size: rem(24);
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		font-size: rem(20);
+	}
+}
+
+%rel {
+	position: relative;
+	z-index: 1;
+}
+
+
+
+%ulink {
+    @extend %rel;
+    display: inline-block;
+    
+    &:after, &:before {
+        @extend %abs;
+        @extend %abs-after;
+        left: 0;
+        width: 100%;
+        transform: scale3d(0, 1, 1);
+        opacity: .5;
+    }
+
+    &:before {
+        bottom: 0;
+        height: 1px;
+        transform-origin: right center;
+        transition: transform;
+        transition-duration: .5s;
+        transition-timing-function: cubic-bezier(.77,0, .175, 1);
+    }
+
+    &:after {
+        top: 0;
+    	height: 100%;
+    }
+
+    &:hover {
+        .desktop & {
+            &:before {                
+                transform: scale3d(1, 1, 1);
+                transform-origin: left center;
+            }
+        }
+    }
+}

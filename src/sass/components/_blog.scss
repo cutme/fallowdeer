@@ -1,0 +1,59 @@
+.c-blog {
+	
+	img {
+		transition: all 2s linear;
+	}
+	
+	&__item {
+		display: block;
+		margin-bottom: 120px;
+		
+		&:hover {
+			.desktop & {
+				color: $c-primary;
+
+				img {
+					transform: scale3d(1.1, 1.1, 1.1);
+				}
+			}
+		}
+	}
+	
+	&__posts {
+		max-width: 860px;
+		margin: 0 0 0 auto;
+		
+		@media ( max-width: 920px ) {
+			margin-left: -10px;
+		}
+		
+		@media ( max-width: $tablet_portrait + px ) {
+			max-width: 560px;
+			margin: 0 auto;
+		}
+		
+		ul {
+			@extend %flex;
+			@extend %flex-wrap;
+			
+			li {
+				max-width: 260px;
+				width: grid(260, 860);
+				margin: 0 10px;
+				
+				@media ( max-width: $tablet_portrait + px ) {
+					width: calc(50% - 20px);
+				}
+			}
+		}
+	}
+	
+	.o-photo {
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	
+	.c-categories {
+		margin-bottom: 40px;
+	}
+}

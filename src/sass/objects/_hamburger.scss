@@ -1,0 +1,91 @@
+.o-hamburger {
+    @include z-index(hamburger);
+    @extend %anim;
+    @extend %flex;
+    @extend %flex-xy;
+    position: fixed;
+    right: calc((100% - 1090px)/2); top: 30px;
+    height: 40px;
+    cursor: pointer; 
+    
+    @media ( max-width: $base + 80px ) {
+		right: 40px;
+	}
+	
+	@media ( max-width: $tablet + px ) {
+		right: 30px;
+	}
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		right: 20px;
+	}
+    
+    &:hover {
+        .desktop & {
+            border-color: $c-primary;
+        }
+    }
+    
+    i {
+        @extend %rel;
+        display: block;
+        width: 47px; height: 24px;
+        border-top: 5px solid $c-black-01;
+        margin-top: -6px;
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+	        margin-right: 10px;
+	    }
+        
+        &:after, &:before {
+            @extend %abs;
+            @extend %abs-after;
+            @extend %anim;
+            width: 100%; 
+            height: 5px;
+            background-color: $c-black-01;
+        }
+        
+        &:after {
+            transform-origin: right;
+            top: 100%;
+        }
+        
+        &:before {
+            transform-origin: left;
+            top: calc(50% - 3px);
+        }
+    }    
+
+    &.is-active {
+        border-color: transparent !important;
+
+        i {
+            border-color: transparent !important;
+            margin-right: 0;
+    
+            &:after {
+                transform: rotate(45deg) translate(-3px, 3px);
+            }
+            
+            &:before {
+                transform: rotate(-45deg) translate(-3px, 15px);            
+            }
+        }
+        
+        strong {
+	        display: none;
+        }
+    }
+    
+    strong {
+	    text-transform: uppercase;
+	    font-size: rem(40);
+	    line-height: 1em;
+	    
+	    @media ( max-width: $tablet_portrait + px ) {
+	    	display: none;
+	    }
+    }
+}
+

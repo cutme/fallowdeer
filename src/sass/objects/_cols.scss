@@ -1,0 +1,63 @@
+.o-cols {
+    
+    @media ( min-width: $tablet_portrait + 1px ) {
+    	display: flex;
+    }
+    
+    &--2 {
+        @extend %flex-spacebetween;
+            
+        .o-cols__item {
+	        @media ( min-width: $tablet_portrait + 1px ) {
+	            width: 50%;
+           }
+           
+           &:first-of-type {
+	           @media ( max-width: $tablet_portrait + px ) {
+	           		margin-bottom: 90px;
+	           }
+           }
+        }
+    }
+    
+    &--withsygnet {
+	    height: calc(100vh - 120px - 35px);
+
+		&__item {
+			@extend %flex;
+			@extend %flex-y;
+			height: 100%;
+			
+			&:last-of-type {
+				width: 434px;
+				margin: 0 0 0 auto;
+			}
+		}
+    }
+    
+    &--post {
+	    
+	    @media ( min-width: $tablet_portrait + 1px ) {
+		    height: calc(100vh);
+	    }
+	    
+	    
+
+		&__item {
+			@extend %flex;
+			@extend %flex-y;
+			height: 100%;
+			
+			&:first-of-type {
+				@media ( max-width: $tablet_portrait + px ) {
+					height: auto;
+				}
+			}			
+		}
+    }
+    
+    &--y {
+		@extend %flex-y;
+    }
+}
+

@@ -1,0 +1,13 @@
+.c-social {
+	@extend %flex-inline;
+
+	a {
+		.desktop & {
+			&:hover {
+				color: $c-primary;
+			}
+		}
+	}
+	
+	
+}

@@ -1,0 +1,73 @@
+<% include ./src/includes/head %>
+
+<div class="o-container">
+
+	<% include ./src/includes/hamburger %>
+	<% include ./src/includes/nav %>
+
+	<% include ./src/includes/portfolio-projekt/header %>
+	<% include ./src/includes/portfolio-projekt/two-cols-1 %>
+	
+	
+	<div class="c-portfolio">
+		<div class="o-section o-section--padding-half">
+			<div class="o-wrap">
+				<article class="o-article o-article--big">
+					<p>
+						<img src=<%= require("./img/photos/portfolio-projekt/01.jpg") %> alt="" width="1088" height="614">
+					</p>
+					
+					<p>
+						<img src=<%= require("./img/photos/portfolio-projekt/02.jpg") %> alt="" width="1088" height="614">
+					</p>
+					
+					<p>
+						<img src=<%= require("./img/photos/portfolio-projekt/03.jpg") %> alt="" width="1088" height="614">
+					</p>
+					
+					<p>
+						<img src=<%= require("./img/photos/portfolio-projekt/04.jpg") %> alt="" width="726" height="1089" class="aligncenter">
+					</p>
+				</article>
+			</div>
+		</div>
+		
+		
+		<% include ./src/includes/portfolio-projekt/two-cols-2 %>
+		
+		
+		<div class="c-portfolio__other">
+			<div class="o-wrap">
+				<header class="o-header">
+					<h2 class="o-lead o-lead--2">
+						<strong class=" u-highlight">Inne realizacje</strong>
+					</h2>
+				</header>
+			</div>
+
+			<% include ./src/includes/portfolio__thumbs %>
+			
+			<div class="c-portfolio__btn">
+				<p class="o-lead o-lead--2">
+					<strong>Chcesz poznać ofertę?</strong>
+				</p>
+				
+				<p>
+					<a href="oferta.html" class="o-btn o-btn--blackoutline">Oferta</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<% include ./src/includes/opinions %>
+	<% include ./src/includes/instagram %>
+	<% include ./src/includes/whatyouneed %>
+	<% include ./src/includes/footer %>
+
+</div>
+
+
+</body>
+</html>
+
+

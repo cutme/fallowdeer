@@ -1,0 +1,134 @@
+.c-share {
+	margin-bottom: 60px;
+		
+	.o-header {
+		@extend %flex;
+		@extend %flex-y;
+		
+		@media ( max-width: $tablet_portrait + px ) {
+			flex-wrap: wrap;	
+		}
+		
+		.o-lead {
+			font-size: rem(35);
+			
+			@media ( max-width: $tablet_portrait + px ) {
+				width: 100%;
+				margin-bottom: 20px;
+				text-align: center;
+				font-size: rem(32);
+			}
+			
+			@media ( max-width: $smartphone + px ) {
+				width: 100%;
+				margin-bottom: 20px;
+				text-align: center;
+				font-size: rem(24);
+			}
+		}
+
+		.c-social {	
+			
+			@media ( max-width: $tablet_portrait + px ) {
+				width: 100%;
+				justify-content: center;
+			}
+				
+			li {
+				margin-left: 30px;
+				
+				@media ( max-width: $tablet_portrait + px ) {
+					margin: 0 15px;
+				}
+			}
+			
+			[class^="icon-"] {
+				font-size: rem(22);	
+			}
+	
+			.icon-linkedin {
+				font-size: rem(26);
+			}
+			
+		}
+	}
+	
+	&__author {
+		@extend %flex;
+
+		border: {
+			top: 1px solid $c-gray-02;
+			bottom: 1px solid $c-gray-02;
+		}
+		padding: 40px 0;
+		
+		.photo {
+		    align-self: baseline;
+			box-shadow: 0 3px 6px rgba($c-black-01, .16);
+			border: 1px solid $c-gray-02;
+			margin-right: 30px;
+			
+			@media ( max-width: $smartphone + px ) {
+				margin: 0 auto 30px auto;
+			}
+		}		
+	}
+	
+	&__info {
+		
+		@media ( max-width: $smartphone + px ) {
+		    width: 100%;
+		    text-align: center;
+		}
+		
+		a {
+			&:hover {
+				color: $c-primary;
+			}
+		}
+
+		p {
+			font-size: rem(24);
+			
+			&.o-lead {
+				font-size: rem(35);
+			}
+			
+			&.label {
+				font-size: rem(30);
+			}
+			
+			&.role {
+				margin-bottom: .5em;
+				font-size: rem(16);
+			}
+		}
+		
+		.c-social {
+			li {
+				margin-left: 10px;
+				
+				@media ( max-width: $smartphone + px ) {
+					margin: 0 5px;	
+				}
+			}
+		}
+	}
+	
+	&__social {
+		@extend %flex;
+		@extend %flex-y;
+		margin-top: 10px;
+		
+		@media ( max-width: $smartphone + px ) {
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+		
+		p {
+			@media ( max-width: $smartphone + px ) {
+				margin-bottom: 5px;
+			}
+		}
+	}
+}

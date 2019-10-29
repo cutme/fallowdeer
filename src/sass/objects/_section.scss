@@ -1,0 +1,42 @@
+.o-section {
+    
+    &--padding {
+        padding: 100px 0;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+	        padding: 50px 0;
+	    }
+    }
+    
+    &--padding-top {
+	    padding-top: 100px;
+	    
+	    @media ( max-width: $tablet_portrait + px ) {
+	        padding-top: 50px;
+	    }
+    }
+    
+    &--padding-half {
+        padding: 50px 0;
+    }
+    
+    &--triangle {
+	    @extend %rel;
+	    padding-top: 35px;
+	    
+	    &:after {
+		    content: '';
+		    position: absolute;
+		    top: -70px;
+		    left: 0; 
+		    right: 0;
+		    height: 70px;
+		    background-color: $c-primary;
+		    clip-path: polygon(0 100%, 0 0,100% 70px);
+		}
+	}
+	
+	&--margintop {
+		margin-top: 35px;
+	}
+}

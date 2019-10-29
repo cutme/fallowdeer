@@ -1,0 +1,34 @@
+/*
+.glide {
+
+    &__bullet {
+        @extend %rel;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $c-primary;
+
+        &:after {
+            @extend %abs;
+            @extend %abs-xy;
+            width: 14px; height: 14px;
+            background-color: $c-primary;
+            border-radius: 50%;
+            content: ' ';
+            display: none;
+        }
+
+        &--active {
+            &:after {
+                display: block;
+            }
+        }
+    }
+    
+    &__slides,
+    &__track {
+        height: 100%;
+    }
+}
+*/

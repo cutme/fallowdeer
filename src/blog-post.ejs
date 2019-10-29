@@ -1,0 +1,128 @@
+<% include ./src/includes/head %>
+
+<div class="o-container">
+
+	<% include ./src/includes/hamburger %>
+	<% include ./src/includes/nav %>
+
+	<% include ./src/includes/blog-post/header %>
+	
+	<div class="c-blog">
+		<div class="o-wrap">
+			
+			<div class="c-blog__post">
+				<article class="o-article o-article--big">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+
+					<figure>
+						<img src=<%= require("./img/photos/blog/inpost.jpg") %> alt="" width="1088" height="614">
+						<figcaption>To jest opis obrazka</figcaption>
+					</figure>
+					
+					<h2>Nagłówek H2 - może być naprawdę długi, ale nigdy nudny</h2>
+					
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				</article>
+				
+				
+				<div class="c-share">
+					<header class="o-header">
+						<h3 class="o-lead"><strong>Podobało Ci się? Podziel się:</strong></h3>
+						
+						<ul class="c-social">
+							<li>
+								<a href="#" class="icon-instagram"></a>
+							</li>
+							
+							<li>
+								<a href="#" class="icon-facebook"></a>
+							</li>
+							
+							<li>
+								<a href="#" class="icon-linkedin"></a>
+							</li>
+						</ul>
+					</header>
+					
+					<div class="c-share__author">
+						
+						<div class="photo">
+							<img src=<%= require("./img/photos/users/author.jpg") %> alt="" width="234" height="234">
+						</div>
+						
+						<div class="c-share__info">
+							<p class="label">Autor wpisu</p>
+							
+							<p class="o-lead"><strong class="u-highlight">Daniel Smoleń</strong></p>
+							
+							<p class="role"><em>CEO Fallow Deer</em></p>
+							
+							<p>
+								<a href="mailto:kontakt@fallowdeer.pl">kontakt@fallowdeer.pl</a>
+							</p>
+							
+							<p>
+								<a href="tel:0048516147796">516 147 796</a>
+							</p>
+							
+							<div class="c-share__social">
+								<p>Bądźmy w kontakcie:</p>
+								
+								<ul class="c-social">
+									<li>
+										<a href="#" class="icon-instagram"></a>
+									</li>
+									
+									<li>
+										<a href="#" class="icon-facebook"></a>
+									</li>
+									
+									<li>
+										<a href="#" class="icon-linkedin"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+
+
+			<header class="o-header">
+				<h2 class="o-lead--2">
+					<strong>Inne posty</strong>
+				</h2>
+			</header>
+
+			<% include ./src/includes/blog__categories %>
+			<% include ./src/includes/blog__posts %>
+		</div>	
+	</div>
+	
+	<% include ./src/includes/footer %>
+
+</div>
+
+
+</body>
+</html>
+
+

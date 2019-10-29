@@ -1,0 +1,101 @@
+.c-portfolio {
+	
+	&__btn {
+		text-align: center;
+		padding: 70px 0 80px 0;
+				
+		.o-lead {
+			margin-bottom: 1em;
+		}
+	}
+	
+	&__item {
+		@extend %rel;
+		display: block;
+		overflow: hidden;		
+		
+		&:hover {
+			.o-details {
+				transform: translate3d(0, 0, 0);
+				opacity: 1;
+			}
+		}
+	}
+	
+	&__thumbs {
+		max-width: 1374px;
+		margin: 0 auto;
+		
+		@media ( max-width: $smartphone + px ) {
+			max-width: 458px;
+		}
+
+		& > ul {
+			@extend %flex;
+			@extend %flex-wrap;
+			
+			& > li {
+				width: grid(458, 1374);
+				
+				@media ( max-width: $tablet_portrait + px ) {
+					width: 50%;
+				}
+				
+				@media ( max-width: $smartphone + px ) {
+					width: 100%;
+				}
+			}
+		}
+		
+		.o-details {
+			@extend %flex;
+			@extend %flex-column;
+			@extend %flex-x;
+			padding: 20px 20px 40px 20px;
+			
+			@media ( min-width: $tablet + 1px ) {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				background-color: $c-primary;
+				padding: 0 grid(70, 458);
+				opacity: 0;
+				content: ' ';
+				transition: 350ms ease-in-out;
+				transform: translate3d(0, 100%, 0);
+			}
+			
+			li {
+				@media ( max-width: $thumbs + px ) {
+					font-size: thumbs(30);
+				}
+				
+				@media ( max-width: $tablet_portrait + px ) {
+					font-size: rem(18);
+				}
+			}
+			
+			&__btn {				
+				.o-btn {
+					@media ( min-width: $tablet_portrait + 1px ) and ( max-width: $thumbs + px ) {
+						height: thumbs(42);
+						font-size: thumbs(24);
+					}
+				}
+			}
+			
+			.o-lead {				
+				&--2 {
+					@media ( max-width: $thumbs + px ) {
+						font-size: thumbs(32);
+					}
+					
+					@media ( max-width: $tablet_portrait + px ) {
+						line-height: 1em;
+						font-size: rem(24);
+					}
+				}
+			}
+		}
+	}
+}

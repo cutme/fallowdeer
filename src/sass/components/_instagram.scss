@@ -1,0 +1,13 @@
+.c-instagram {
+
+	.o-section {		
+		padding-left: calc((100% - 1090px)/2);
+		
+		@media ( max-width: $base + 80px ) {
+			padding: {
+				left: 30px;
+				right: 30px;
+			}
+		}
+	}
+}

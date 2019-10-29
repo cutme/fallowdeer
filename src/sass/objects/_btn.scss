@@ -1,0 +1,65 @@
+.o-btn {
+    @extend %anim;
+    display: inline-flex;
+    @extend %flex-xy;
+    @extend %rel;
+    height: 56px;
+    white-space: nowrap;
+    font: {
+        size: rem(24);
+        family: $text;
+        weight: $bold;
+    }
+    
+    &--blackoutline {
+	    height: 42px;
+	    border: 2px solid $c-black-01;
+	    padding: 0 40px 2px 40px;
+	    font-weight: $bold;
+	    color: $c-black-01;
+    }
+   
+    &--blackoutlineoval {
+	    border: 4px solid $c-black-01;
+	    border-radius: 28px;
+	    padding: 0 80px;
+	    font-weight: $bold;
+	    color: $c-black-01;
+    }
+    
+    &--triangle {
+	    height: 52px;
+	    background-color: $c-black-02;
+	    padding: 0 40px;
+	    box-shadow: 0 3px 6px rgba($c-black-01, .8);
+	    font-size: rem(32);
+	    color: white;
+
+	    &:after {
+		    @extend %abs;
+		    @extend %abs-after;
+		    top: 0; right: -18px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 52px 18px 0 0;
+			border-color: $c-black-02 transparent transparent transparent;
+			
+	    }
+    }
+    
+    span {
+        width: 100%;
+	}
+	
+	.desktop & {
+    
+    	&--blackoutline,
+        &--blackoutlineoval {
+            &:hover {
+				background-color: $c-black-01;
+				color: $c-primary;
+            }
+        }
+    }
+}
