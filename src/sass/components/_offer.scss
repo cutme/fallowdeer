@@ -2,23 +2,39 @@
 	
 	ul {
 		@extend %flex;
-		@extend %flex-spacebetween;
 		@extend %flex-wrap;
+		
+		@media ( min-width: $tablet + 1px ) {
+			justify-content: space-between;
+		}
 	}
 	
 	li {
 		width: calc(100% / 3);
 		margin-bottom: 80px;
 		
+		@media ( max-width: $tablet + px ) {
+			width: 50%;
+		}
+		
+		@media ( max-width: $smartphone + px ) {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+		
 		&:nth-child(3n + 1) {
 			.c-offer__item {
-				margin: 0 auto 0 0;
+				@media ( min-width: $tablet + 1px ) {
+					margin: 0 auto 0 0;
+				}
 			}
 		}
 		
 		&:nth-child(3n + 3) {
 			.c-offer__item {
-				margin: 0 0 0 auto;
+				@media ( min-width: $tablet + 1px ) {
+					margin: 0 0 0 auto;
+				}
 			}
 		}
 	}
