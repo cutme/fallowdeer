@@ -45,9 +45,11 @@ document.addEventListener('DOMContentLoaded',function() {
             }
         };
       
+/*
 		for (let i = 0; i < link.length; i++) {			
 			link[i].addEventListener('click', hideMenu);
 		}
+*/
         
 
         window.addEventListener('resize', checkWindowWidth);
