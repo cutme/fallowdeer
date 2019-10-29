@@ -55,12 +55,15 @@
 	
 	&__author {
 		@extend %flex;
-
 		border: {
 			top: 1px solid $c-gray-02;
 			bottom: 1px solid $c-gray-02;
 		}
 		padding: 40px 0;
+		
+		@media ( max-width: $smartphone_portrait + px ) {
+			flex-wrap: wrap;
+		}
 		
 		.photo {
 		    align-self: baseline;

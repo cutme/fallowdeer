@@ -37,6 +37,10 @@
 				font-size: rem(20);
 			}
 			
+			@media ( max-width: $smartphone_portrait + px ) {
+				padding: 0 20px;
+			}
+			
 			&.current {
 				a {
 					background-color: $c-primary;
@@ -53,7 +57,9 @@
 			}
 			
 			&:first-child {
-				padding-left: 0;
+				@media ( min-width: $tablet_portrait + 1px ) {
+					padding-left: 0;
+				}
 			}
 		}
 	}
